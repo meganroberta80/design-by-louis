@@ -29,7 +29,10 @@ class ProjectsPage extends Component {
             projectImg
         }
         axios.post('http://localhost:4000/projects', projects)
-            .then(() => window.location.href = "/projects")
+            .then((data) => {
+                this.setState({ projectData: [...this.state.projectData, data.data] })
+                console.log(data)
+            })
             .catch(err => {
                 console.error(err)
             })
