@@ -120,3 +120,24 @@ li {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/* CSS FOR IMAGES */
+#design1 {
+  background-image: url(./img/design1.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+#design2 {
+  background-image: url(./img/design2.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+#design3 {
+  background-image: url(./img/design3.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* CAROUSEL */

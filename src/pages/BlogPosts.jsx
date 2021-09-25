@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Widget } from "@uploadcare/react-widget";
 
 class BlogPosts extends Component {
     state = {
@@ -78,6 +79,10 @@ class BlogPosts extends Component {
                         <button className="button-sign" type='submit'>Create</button>
                     </form>
                 </div>
+                <div>
+                    <label htmlFor='file'>Your Photo:</label>{' '}
+                    <Widget publicKey='YOUR_PUBLIC_KEY' id='file' />
+                </div>
             </div>
         )
     }
@@ -94,10 +99,10 @@ function BlogPost(props) {
         return (
         <div className="blog-posts" key={idx}>
             <h3>{t}</h3>
-        
+
         </div>
         )
-        
+
     })
 
     return (
