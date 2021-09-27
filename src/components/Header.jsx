@@ -4,7 +4,7 @@ import designByLouis from '../img/design-by-louis-logo-2.png'
 function Header() {
     return (
         <nav className="header">
-            <div>
+            <div className="logoBar">
                 <Link to="/"> <img src={designByLouis} className="logo" alt="Design by Louis Logo"></img></Link>
             </div>
             <div className="navBar">

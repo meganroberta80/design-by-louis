@@ -4,11 +4,11 @@ import design3 from '../img/design3.jpeg'
 
 function HomePage() {
     return (
-        <div>
+        <div className="homePage">
             <div>
                 <h1>Welcome to Design by Louis</h1>
             </div>
-            <div>
+            <div className="homepageImages">
                 <img src={design1} className="design" alt="Interior design"></img>
                 <img src={design2} className="design" alt="Interior design"></img>
                 <img src={design3} className="design" alt="Interior design"></img>

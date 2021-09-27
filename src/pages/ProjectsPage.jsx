@@ -1,6 +1,10 @@
 import axios from 'axios'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Widget } from "@uploadcare/react-widget";
+
+import design4 from '../img/design4.jpeg'
+import design5 from '../img/design5.jpeg'
 
 class ProjectsPage extends Component {
     state = {
@@ -54,14 +58,18 @@ class ProjectsPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="projectsPage">
                 <main>
                     <h1>Previous Projects</h1>
                     {this.renderProjects()}
                 </main>
+                <div className="exampleProjects">
+                <img src={design4} className="design" alt="Interior design"></img>
+                <img src={design5} className="design" alt="Interior design"></img>
+                </div>
                 <div className="project-form-wrapper">
                     <form className="post-form" onSubmit={this.handleSubmit}>
-                        <h3 className="title" >Add A Project!</h3>
+                        <h3 className="title" ></h3>
                         <br />
 
                         <div className="input-field">
@@ -69,12 +77,13 @@ class ProjectsPage extends Component {
                         </div>
                         <br />
 
-                        <div className="input-field">
-                            <input className="input" placeholder="Project Image" type='text' name='projectImg' value={this.state.projectImg} onChange={this.handleInputChange}></input>
+                        <div>
+                            <label htmlFor='file'></label>{' '}
+                            <Widget publicKey='f86e0b7d379d6636300dY' id='file' />
                         </div>
                         <br />
 
-                        <button className="button-sign" type='submit'>Create</button>
+                        <button className="btn" type='submit'>Create</button>
                     </form>
                 </div>
             </div>

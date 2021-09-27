@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Widget } from "@uploadcare/react-widget";
 
 class BlogPosts extends Component {
     state = {
@@ -56,12 +55,23 @@ class BlogPosts extends Component {
 
     render() {
         return (
-            <div>
+            <div className="blogPosts">
                 <main>
                     <h1>Blog Posts</h1>
                     {this.renderBlog()}
                 </main>
-                <div className="project-form-wrapper">
+                <div className="exampleBlogPosts">
+                    <h2>How to Change a Lightbulb</h2>
+                    <p>His autem everti temporibus ea. Dico veritus comprehensam sed ea, prompta consequuntur usu cu. Nec ridens impetus cu. Ex sed nihil aliquid molestiae. Has alii erant partiendo no, cum ne vidit summo primis.
+                    <br />
+                    Invidunt reprehendunt nam no. Ferri reque petentium mea an, vim in natum salutandi voluptatum. Nam habeo fugit assueverit id, vivendo sensibus per eu. Ex eos malis habemus iracundia, sea solum erant causae ex, laudem graecis his an. Pri ex quis legimus.</p>
+
+                    <h2>How to Paint Cabinets</h2>
+                    <p>Altera invidunt mediocrem has te, tritani nostrud blandit vix ea. Meis quas reformidans in mea. Cum dolore altera verear no, sit pertinax atomorum abhorreant et. Perfecto interesset id usu. Eu melius intellegam mei, definiebas reprehendunt nec an.
+                    <br />
+                    Te cum epicuri rationibus quaerendum, habeo periculis ei cum, ea doming delenit per. Et cibo placerat tractatos mea. In vim lorem meliore senserit. Nec nisl voluptua delicata ei, te quem iusto urbanitas pro. Aperiri constituto ne duo, sea probo saepe ne. Oportere consectetuer eu nam.</p>
+                </div>
+                <div className="project-form-wrapper" >
                     <form className="post-form" onSubmit={this.handleSubmit}>
                         <h3 className="title" >Add A Post!</h3>
                         <br />
@@ -76,13 +86,10 @@ class BlogPosts extends Component {
                         </div>
                         <br />
 
-                        <button className="button-sign" type='submit'>Create</button>
+                        <button className="btn" type='submit'>Create</button>
                     </form>
                 </div>
-                <div>
-                    <label htmlFor='file'>Your Photo:</label>{' '}
-                    <Widget publicKey='YOUR_PUBLIC_KEY' id='file' />
-                </div>
+                
             </div>
         )
     }

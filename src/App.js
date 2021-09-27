@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <div classname="App">
+    <div className="App">
       <Header />
       <br />
       <Switch>
